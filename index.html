@@ -1,36 +1,91 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Career Guidance Form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Career Guidance & Scholarship Support</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="logo">CareerGuide Odisha</div>
+        <button class="menu-toggle" id="menuToggle">☰</button>
+        <nav id="navMenu">
+            <a href="#home">Home</a>
+            <a href="#careers">Careers</a>
+            <a href="#scholarships">Scholarships</a>
+            <a href="#success">Success Stories</a>
+        </nav>
+    </header>
 
-<div class="container">
-    <h1>CAREER GUIDANCE FORM</h1>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <h1>Empowering Rural Students for a Better Future</h1>
+        <p>Find the right career path, entrance exams, and government scholarships all in one place.</p>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search careers, courses, or scholarships...">
+            <button onclick="performSearch()">Search</button>
+        </div>
+    </section>
 
-    <form id="form">
+    <!-- Career Guidance Section -->
+    <section id="careers" class="container">
+        <h2>Career Guidance by Stream</h2>
+        <div class="tabs">
+            <button class="tab-btn active" onclick="openStream('science')">Science</button>
+            <button class="tab-btn" onclick="openStream('commerce')">Commerce</button>
+            <button class="tab-btn" onclick="openStream('arts')">Arts</button>
+        </div>
 
-        <label>Name</label>
-        <input type="text" id="name" placeholder="Enter your name">
+        <div id="science" class="stream-content active">
+            <h3>Science Stream</h3>
+            <ul>
+                <li><strong>Engineering:</strong> Requires JEE Main/Advanced. Options: B.Tech, B.Arch.</li>
+                <li><strong>Medical:</strong> Requires NEET. Options: MBBS, BDS, B.Pharm.</li>
+                <li><strong>Pure Sciences:</strong> B.Sc in Physics, Chemistry, Mathematics.</li>
+            </ul>
+        </div>
+        <div id="commerce" class="stream-content">
+            <h3>Commerce Stream</h3>
+            <ul>
+                <li><strong>Chartered Accountancy (CA):</strong> Foundation, Intermediate, Final.</li>
+                <li><strong>B.Com / BBA:</strong> Management and Finance degrees.</li>
+                <li><strong>CS / CMA:</strong> Company Secretary and Cost Management Accounting.</li>
+            </ul>
+        </div>
+        <div id="arts" class="stream-content">
+            <h3>Arts Stream</h3>
+            <ul>
+                <li><strong>Civil Services:</strong> UPSC, OPSC preparation.</li>
+                <li><strong>Law:</strong> CLAT for LLB.</li>
+                <li><strong>Journalism & Mass Comm:</strong> Bachelor's in Journalism.</li>
+            </ul>
+        </div>
+    </section>
 
-        <label>Class</label>
-        <input type="text" id="class" placeholder="Enter your class">
+    <!-- Scholarship Section -->
+    <section id="scholarships" class="container bg-light">
+        <h2>Government Scholarships (Odisha & Central)</h2>
+        <div class="scholarship-grid" id="scholarshipList">
+            <!-- Populated by JS -->
+        </div>
+    </section>
 
-        <label>Stream</label>
-        <input type="text" id="stream" placeholder="Science / Arts / Commerce">
+    <!-- Success Stories Section -->
+    <section id="success" class="container">
+        <h2>Success Stories from Odisha</h2>
+        <div class="story-card">
+            <p>"I came from a small village in Ganjam. This platform helped me find the Odisha Post-Matric Scholarship, which funded my B.Tech degree. Today I am an engineer."</p>
+            <span>- Ramesh Sahu</span>
+        </div>
+    </section>
 
-        <label>Interest</label>
-        <input type="text" id="interest" placeholder="Your interest">
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Digital Career Guidance & Scholarship Support Platform. Built for Odisha.</p>
+    </footer>
 
-        <button type="submit">SUBMIT</button>
-
-    </form>
-
-    <p id="result"></p>
-</div>
-
-<script src="script.js"></script>
-
+    <script src="script.js"></script>
 </body>
-</html>
+    </html>
