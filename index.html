@@ -15,7 +15,7 @@
             <a href="#home">Home</a>
             <a href="#careers">Careers</a>
             <a href="#scholarships">Scholarships</a>
-            <a href="#success">Success Stories</a>
+            <a href="#register">Register</a>
         </nav>
     </header>
 
@@ -33,9 +33,9 @@
     <section id="careers" class="container">
         <h2>Career Guidance by Stream</h2>
         <div class="tabs">
-            <button class="tab-btn active" onclick="openStream('science')">Science</button>
-            <button class="tab-btn" onclick="openStream('commerce')">Commerce</button>
-            <button class="tab-btn" onclick="openStream('arts')">Arts</button>
+            <button class="tab-btn active" onclick="openStream('science', event)">Science</button>
+            <button class="tab-btn" onclick="openStream('commerce', event)">Commerce</button>
+            <button class="tab-btn" onclick="openStream('arts', event)">Arts</button>
         </div>
 
         <div id="science" class="stream-content active">
@@ -72,8 +72,45 @@
         </div>
     </section>
 
+    <!-- Student Registration Form Section -->
+    <section id="register" class="container">
+        <h2>Student Registration</h2>
+        <p>Tell us a little about yourself so we can point you to the right guidance.</p>
+        
+        <form id="registrationForm" class="registration-form">
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" placeholder="Enter your age" required>
+
+            <label for="qualification">Qualification</label>
+            <select id="qualification" name="qualification" required>
+                <option value="">Select one</option>
+                <option value="10th">10th Pass</option>
+                <option value="12th">12th Pass</option>
+                <option value="diploma">Diploma</option>
+                <option value="graduation">Graduation</option>
+                <option value="post_graduation">Post Graduation</option>
+            </select>
+
+            <label for="category">Category</label>
+            <select id="category" name="category" required>
+                <option value="">Select one</option>
+                <option value="sc">SC</option>
+                <option value="st">ST</option>
+                <option value="obc">OBC</option>
+                <option value="sebc">SEBC</option>
+                <option value="gen">General</option>
+                <option value="ews">EWS</option>
+            </select>
+
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </section>
+
     <!-- Success Stories Section -->
-    <section id="success" class="container">
+    <section id="success" class="container bg-light">
         <h2>Success Stories from Odisha</h2>
         <div class="story-card">
             <p>"I came from a small village in Ganjam. This platform helped me find the Odisha Post-Matric Scholarship, which funded my B.Tech degree. Today I am an engineer."</p>
@@ -88,4 +125,4 @@
 
     <script src="script.js"></script>
 </body>
-    </html>
+</html>
